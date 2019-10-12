@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3688ABF4EE346C44E869BAB0 /* Pods_TextDetection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD0209F7273A6E244F8B9339 /* Pods_TextDetection.framework */; };
 		4C16B9D02339AD54002452AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C16B9CF2339AD54002452AB /* AppDelegate.swift */; };
 		4C16B9D22339AD54002452AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C16B9D12339AD54002452AB /* SceneDelegate.swift */; };
 		4C16B9D42339AD54002452AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C16B9D32339AD54002452AB /* ViewController.swift */; };
@@ -27,6 +28,9 @@
 		4C16B9DB2339AD55002452AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C16B9DD2339AD55002452AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C5B72BB2350916E0029C886 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		6D0BCC0C709860F4D3AAF604 /* Pods-TextDetection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextDetection.debug.xcconfig"; path = "Target Support Files/Pods-TextDetection/Pods-TextDetection.debug.xcconfig"; sourceTree = "<group>"; };
+		AD0209F7273A6E244F8B9339 /* Pods_TextDetection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextDetection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D14D95D9F5672BF7271C0B49 /* Pods-TextDetection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextDetection.release.xcconfig"; path = "Target Support Files/Pods-TextDetection/Pods-TextDetection.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3688ABF4EE346C44E869BAB0 /* Pods_TextDetection.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +51,8 @@
 				0B9EFB9723517EC400609C99 /* README.md */,
 				4C16B9CE2339AD54002452AB /* TextDetection */,
 				4C16B9CD2339AD54002452AB /* Products */,
+				92EA52973896DF771C4DC65C /* Pods */,
+				63C137786085B61C3D52304A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +79,24 @@
 			path = TextDetection;
 			sourceTree = "<group>";
 		};
+		63C137786085B61C3D52304A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD0209F7273A6E244F8B9339 /* Pods_TextDetection.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		92EA52973896DF771C4DC65C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6D0BCC0C709860F4D3AAF604 /* Pods-TextDetection.debug.xcconfig */,
+				D14D95D9F5672BF7271C0B49 /* Pods-TextDetection.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -79,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C16B9E02339AD55002452AB /* Build configuration list for PBXNativeTarget "TextDetection" */;
 			buildPhases = (
+				33FFD5F2E1C39D9E01CA2D7A /* [CP] Check Pods Manifest.lock */,
 				4C16B9C82339AD54002452AB /* Sources */,
 				4C16B9C92339AD54002452AB /* Frameworks */,
 				4C16B9CA2339AD54002452AB /* Resources */,
+				702866980A53BF3CFC377B62 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -137,6 +164,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		33FFD5F2E1C39D9E01CA2D7A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TextDetection-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		702866980A53BF3CFC377B62 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TextDetection/Pods-TextDetection-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/TesseractOCRiOS/TesseractOCR.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TesseractOCR.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TextDetection/Pods-TextDetection-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4C16B9C82339AD54002452AB /* Sources */ = {
@@ -288,6 +362,7 @@
 		};
 		4C16B9E12339AD55002452AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D0BCC0C709860F4D3AAF604 /* Pods-TextDetection.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -306,6 +381,7 @@
 		};
 		4C16B9E22339AD55002452AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D14D95D9F5672BF7271C0B49 /* Pods-TextDetection.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

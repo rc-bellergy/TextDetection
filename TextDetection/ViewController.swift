@@ -138,7 +138,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
                     kCIInputSaturationKey: 0,
                     kCIInputContrastKey: 32
                 ])
-                .applyingFilter("CIColorInvert")
+//                .applyingFilter("CIColorInvert")
             
             // Show the dected area for preview
             let image = UIImage(ciImage: correctedImage)
