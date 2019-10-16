@@ -5,7 +5,7 @@ DEPENDENCIES:
   - TesseractOCRiOS
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - TesseractOCRiOS
 
 SPEC CHECKSUMS:
@@ -13,4 +13,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 1ed2dba36f473931ce51fa2eb1a7323be1c5c15b
 
-COCOAPODS: 1.6.2
+COCOAPODS: 1.8.3
